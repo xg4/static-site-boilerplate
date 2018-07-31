@@ -7,7 +7,10 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('@/views/Home.vue')
+    component: () => import('@/views/Home.vue'),
+    meta: {
+      keepAlive: 'Home'
+    }
   },
   {
     path: '/about',
@@ -21,7 +24,7 @@ const routes = [
   }
 ]
 
-function scrollBehavior (to, from, savedPosition) {
+const scrollBehavior = (to, from, savedPosition) => {
   if (savedPosition) {
     return savedPosition
   } else {
