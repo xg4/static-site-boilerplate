@@ -1,0 +1,18 @@
+.van-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+.van-radio {
+  .van-icon-checked {
+    color: #007bff;
+  }
+}
+
+.van-checkbox__icon--checked .van-icon {
+  color: #fff;
+  border-color: #007bff;
+  background-color: #007bff;
+}
