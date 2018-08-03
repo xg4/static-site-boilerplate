@@ -111,7 +111,9 @@ import xShop from '@/components/common/shop'
 import swipeImg from '@/assets/images/home/bg.png'
 
 export default {
-  name: 'Home',
+  async asyncData ({ app }) {
+    await app.$axios.get('/public/staffList')
+  },
   data () {
     return {
       swipeImg
