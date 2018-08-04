@@ -175,7 +175,7 @@ export default {
   }
   &-phone {
     font-size: 16px;
-    color: #919399;
+    color: $gray-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -187,7 +187,7 @@ export default {
     &__btn {
       padding: 0;
       font-size: 16px;
-      color: #919399;
+      color: $gray-color;
       border: none;
     }
   }
@@ -231,12 +231,12 @@ export default {
           margin-bottom: 6px;
         }
         &--two {
-          color: #919399;
+          color: $gray-color;
         }
       }
       .multi-list {
-        border-top: 1px solid #c6c7cc;
-        border-bottom: 1px solid #c6c7cc;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
         height: 90px;
         overflow-y: scroll;
         margin-bottom: 30px;
@@ -245,7 +245,7 @@ export default {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          border-bottom: 1px solid #c6c7cc;
+          border-bottom: 1px solid $border-color;
           padding: 0 5px;
         }
       }

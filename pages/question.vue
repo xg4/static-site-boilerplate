@@ -3,7 +3,6 @@
     <header class="question-header">
       <i class="question-header__back"
          @click="$router.back()">
-        &lt;
       </i>
       <span class="question-header__title">
         在线问答
@@ -45,9 +44,12 @@ export default {
     position: relative;
     &__back {
       width: 13px;
-      height: 23px;
+      height: 18px;
       position: absolute;
       left: 20px;
+      background: url("~/assets/images/common/switch_left.png") no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
     }
     &__title {
       font-size: 18px;
@@ -87,7 +89,7 @@ export default {
       font-weight: normal;
       margin: 0;
       font-size: 16px;
-      color: #919399;
+      color: $gray-color;
       height: 60px;
       padding-right: 20px;
       border-bottom: 1px solid #c7c6cc;
@@ -96,8 +98,8 @@ export default {
         height: 20px;
         border-radius: 10px;
         font-size: 12px;
-        color: #919399;
-        border: 1px solid #919399;
+        color: $gray-color;
+        border: 1px solid $gray-color;
         display: flex;
         justify-content: center;
         align-items: center;

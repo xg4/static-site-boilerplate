@@ -1,15 +1,15 @@
 <template>
-  <section class="home">
+  <main class="home">
     <header class="home-header">
       <div class="home-header__title">
         <div class="home-header__brand">
           <div class="home-header__logo">
 
           </div>
-          <div class="home-header__slogan">
+          <!-- <div class="home-header__slogan">
             <p>六年深耕网店转让</p>
             <p>汇聚百万资源市场</p>
-          </div>
+          </div> -->
         </div>
         <van-button type="default"
                     plain
@@ -39,10 +39,12 @@
       </ul>
     </header>
 
-    <div class="home-post">
-      <i class="home-post__icon">x</i>
-      <span class="home-post__text">易店无忧官网防骗公告！</span>
-    </div>
+    <nuxt-link tag="div"
+               to="/notice"
+               class="home-notice">
+      <i class="home-notice__icon">x</i>
+      <span class="home-notice__text">易店无忧官网防骗公告！</span>
+    </nuxt-link>
 
     <div class="x-number-board">
       <div class="x-number-board__title">
@@ -103,16 +105,20 @@
                tag="li" />
       </ul>
     </div>
-  </section>
+
+    <xTabbar />
+  </main>
 </template>
 
 <script>
 import xShop from '@/components/common/shop'
+import xTabbar from '@/components/common/tabbar'
+// pro remove
 import swipeImg from '@/assets/images/home/bg.png'
 
 export default {
   async asyncData ({ app }) {
-    // await app.$axios.get('/public/staffList')
+    console.log(await app.$axios.get('/test/getUser'))
   },
   data () {
     return {
@@ -120,7 +126,8 @@ export default {
     }
   },
   components: {
-    xShop
+    xShop,
+    xTabbar
   }
 }
 </script>
@@ -130,6 +137,7 @@ export default {
 
 .home {
   width: 100%;
+  background: #fff;
   &-header {
     width: 100%;
     height: 370px;
@@ -151,24 +159,24 @@ export default {
       align-items: flex-end;
     }
     &__logo {
-      width: 100px;
+      width: 200px;
       height: 100%;
-      background: url("~/assets/images/logo.png") no-repeat;
+      background: url("~/assets/images/home/logo.png") no-repeat;
       background-size: 100% 100%;
       margin-right: 3px;
     }
-    &__slogan {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      // font-weight: bold;
-      p {
-        margin: 0;
-        font-size: 12px;
-        color: #fff;
-      }
-    }
+    // &__slogan {
+    //   height: 100%;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: flex-end;
+    //   // font-weight: bold;
+    //   p {
+    //     margin: 0;
+    //     font-size: 12px;
+    //     color: #fff;
+    //   }
+    // }
     &__sell {
       width: 108px;
       height: 34px;
@@ -231,9 +239,9 @@ export default {
   }
 
   // 公告
-  &-post {
-    height: 13.5px;
-    padding: 0 30px;
+  &-notice {
+    // height: 13.5px;
+    padding-left: 30px;
     margin-bottom: 20px;
     &__icon {
       width: 10px;
@@ -242,7 +250,7 @@ export default {
     }
     &__text {
       font-size: 14px;
-      color: #303133;
+      color: $title-color;
     }
   }
 
@@ -291,7 +299,7 @@ export default {
     }
     &__intro {
       font-size: 16px;
-      color: #919399;
+      color: $gray-color;
       margin-bottom: 30px;
     }
   }

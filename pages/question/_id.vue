@@ -30,6 +30,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~/assets/css/common/var.scss";
+
 .question-detail {
   padding: 0 20px;
   margin-bottom: 30px;
@@ -37,7 +39,7 @@ export default {
     margin: 40px 0 0;
     font-size: 24px;
     margin-bottom: 27px;
-    color: #303133;
+    color: $title-color;
   }
   &__content {
     width: 100%;
@@ -45,7 +47,7 @@ export default {
     background: #fff;
     padding: 20px;
     font-size: 16px;
-    color: #303133;
+    color: $title-color;
     line-height: 1.5;
     border-radius: 2px;
     border: 1px solid #ff4c4c;

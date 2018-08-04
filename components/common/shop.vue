@@ -68,6 +68,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/assets/css/common/var.scss";
 @import "@/assets/css/mixins/index.scss";
 
 .x-shop {
@@ -76,7 +77,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #c6c7cc;
+  border-bottom: 1px solid $border-color;
   &:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -134,7 +135,7 @@ export default {
       color: #797a80;
     }
     &__value {
-      color: #303133;
+      color: $title-color;
     }
   }
 }

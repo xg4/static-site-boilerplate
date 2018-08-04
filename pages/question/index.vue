@@ -44,13 +44,13 @@ export default {
       height: 120px;
       resize: none;
       border-radius: 4px;
-      border: 1px solid #c6c7cc;
+      border: 1px solid $border-color;
       box-shadow: 0 5px 8px rgba(25, 25, 51, 0.1);
       font-size: 14px;
       color: #333;
       margin-bottom: 20px;
       &::placeholder {
-        color: #919399;
+        color: $gray-color;
       }
     }
     &__btn {

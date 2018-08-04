@@ -3,7 +3,6 @@
     <header class="account-header">
       <i class="account-header__back"
          @click="$router.back()">
-        &lt;
       </i>
     </header>
     <div class="account-brand">
@@ -38,10 +37,8 @@
 
 <script>
 export default {
-  data () {
-    return {
-
-    }
+  asyncData ({ redirect }) {
+    redirect('/account/login')
   }
 }
 </script>
@@ -60,7 +57,13 @@ export default {
     display: flex;
     align-items: center;
     &__back {
-      margin-left: 20px;
+      width: 13px;
+      height: 18px;
+      position: absolute;
+      left: 20px;
+      background: url("~/assets/images/common/switch_left.png") no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
     }
   }
   &-brand {
@@ -74,7 +77,7 @@ export default {
       width: 120px;
       height: 45px;
       margin: 10px 0;
-      background: url("~/assets/images/logo.png") no-repeat;
+      background: url("~/assets/images/common/logo.png") no-repeat;
       background-position: center center;
       background-size: 100% 100%;
     }
@@ -107,11 +110,11 @@ export default {
       padding: 0 8px;
       color: #007aff;
       &:not(:last-child) {
-        border-right: 1px solid #c6c7cc;
+        border-right: 1px solid $border-color;
       }
     }
     &__copy {
-      color: #919399;
+      color: $gray-color;
     }
   }
   &-title {
@@ -124,21 +127,21 @@ export default {
   &-input {
     margin-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #c6c7cc;
+    border-bottom: 1px solid $border-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
     &__tip {
       margin-top: 7px;
       font-size: 12px;
-      color: #919399;
+      color: $gray-color;
     }
     &__inner {
       width: 100%;
       font-size: 16px;
       border: none;
       &::placeholder {
-        color: #919399;
+        color: $gray-color;
       }
     }
     &__toolbar {
@@ -168,7 +171,7 @@ export default {
     display: flex;
     align-items: center;
     font-size: 12px;
-    color: #919399;
+    color: $gray-color;
     &__radio {
       margin-right: 5px;
     }
