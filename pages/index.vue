@@ -112,7 +112,7 @@ import swipeImg from '@/assets/images/home/bg.png'
 
 export default {
   async asyncData ({ app }) {
-    await app.$axios.get('/public/staffList')
+    // await app.$axios.get('/public/staffList')
   },
   data () {
     return {
