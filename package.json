@@ -1,0 +1,71 @@
+{
+  "name": "static-build-boilerplate",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/xg4/static-build-boilerplate#readme",
+  "bugs": {
+    "url": "https://github.com/xg4/static-build-boilerplate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xg4/static-build-boilerplate.git"
+  },
+  "license": "MIT",
+  "author": "xg4 <xingor4@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && parcel build src/index.html -d dist --public-url . --no-source-maps --no-content-hash",
+    "clean": "rimraf dist",
+    "dev": "parcel src/index.html",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:css": "stylelint src/**/*.less --fix",
+    "lint:js": "eslint ./src --ext .js --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,less,scss}": [
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^2.2.0",
+    "less": "^3.9.0",
+    "lint-staged": "^8.1.6",
+    "parcel-bundler": "^1.12.3",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-preset-env": "^6.6.0",
+    "prettier": "^1.17.0",
+    "rimraf": "^2.6.3",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0"
+  }
+}
