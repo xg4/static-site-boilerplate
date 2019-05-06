@@ -2,9 +2,6 @@
   "extends": ["stylelint-config-standard"],
   "rules": {
     "at-rule-no-unknown": null,
-    "declaration-colon-newline-after": null,
-    "font-family-no-missing-generic-family-keyword": null,
-    "no-descending-specificity": null,
-    "number-leading-zero": null
+    "no-descending-specificity": null
   }
 }

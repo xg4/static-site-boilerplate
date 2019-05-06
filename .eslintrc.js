@@ -11,7 +11,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: ['standard', 'prettier'],
+  plugins: ['html', 'standard', 'prettier'],
   rules: {
     'no-console': process.env.NODE_ENV !== 'production' ? 0 : 2,
     'no-debugger': process.env.NODE_ENV !== 'production' ? 0 : 2
