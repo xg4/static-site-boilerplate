@@ -1,15 +1,23 @@
 {
-  "name": "static-build-boilerplate",
+  "name": "static-site-boilerplate",
   "version": "0.0.0",
-  "description": "",
-  "keywords": [],
-  "homepage": "https://github.com/xg4/static-build-boilerplate#readme",
+  "description": "Boilerplate for static websites development",
+  "keywords": [
+    "html5",
+    "css3",
+    "es6",
+    "static",
+    "boilerplate",
+    "parcel",
+    "less"
+  ],
+  "homepage": "https://github.com/xg4/static-site-boilerplate#readme",
   "bugs": {
-    "url": "https://github.com/xg4/static-build-boilerplate/issues"
+    "url": "https://github.com/xg4/static-site-boilerplate/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xg4/static-build-boilerplate.git"
+    "url": "git+https://github.com/xg4/static-site-boilerplate.git"
   },
   "license": "MIT",
   "author": "xg4 <xingor4@gmail.com>",
