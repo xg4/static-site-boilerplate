@@ -2,7 +2,7 @@
 
 ## Branch
 
-- [parcel](https://github.com/xg4/static-build-boilerplate/tree/parcel)
+- [parcel](https://github.com/xg4/static-build-boilerplate)
 
 - ~~[webpack](https://github.com/xg4/static-build-boilerplate/tree/webpack)~~ (deprecated)
 
@@ -10,10 +10,12 @@
 
 ```bash
 $ git clone git@github.com:xg4/static-site-boilerplate.git
+# or
+$ git clone https://github.com/xg4/static-site-boilerplate.git
 
 $ cd static-site-boilerplate
 
-$ git checkout -b parcel origin/parcel
-
 $ rm -rf .git && git init
+
+# then remote your github repo
 ```
