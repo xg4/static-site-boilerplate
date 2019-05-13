@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "description": "Boilerplate for static websites development",
   "keywords": [
-    "html5",
+    "boilerplate",
     "css3",
     "es6",
-    "static",
-    "boilerplate",
+    "html5",
+    "less",
     "parcel",
-    "less"
+    "static"
   ],
   "homepage": "https://github.com/xg4/static-site-boilerplate#readme",
   "bugs": {
@@ -21,14 +21,13 @@
   },
   "license": "MIT",
   "author": "xg4 <xingor4@gmail.com>",
-  "main": "index.js",
   "scripts": {
     "build": "npm run clean && parcel build src/index.html -d dist --public-url . --no-source-maps --no-content-hash",
     "clean": "rimraf dist",
-    "dev": "parcel src/index.html",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:css": "stylelint src/**/*.less --fix",
-    "lint:js": "eslint ./src --ext .js --fix"
+    "lint:js": "eslint ./src --ext .js --fix",
+    "start": "parcel src/index.html"
   },
   "husky": {
     "hooks": {
