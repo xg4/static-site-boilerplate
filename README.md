@@ -16,7 +16,7 @@ $ git clone https://github.com/xg4/static-site-boilerplate.git <your project nam
 $ cd static-site-boilerplate
 $ rm -rf .git
 $ git init
-$ git remote add origin <url>
+$ git remote add origin <your git repo>
 $ git add .
 $ git commit -m "Initial commit"
 $ git push -u origin master
