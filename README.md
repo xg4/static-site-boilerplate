@@ -9,13 +9,15 @@
 ## Installation
 
 ```bash
-$ git clone git@github.com:xg4/static-site-boilerplate.git
+$ git clone git@github.com:xg4/static-site-boilerplate.git <your project name>
 # or
-$ git clone https://github.com/xg4/static-site-boilerplate.git
+$ git clone https://github.com/xg4/static-site-boilerplate.git <your project name>
 
 $ cd static-site-boilerplate
-
-$ rm -rf .git && git init
-
-# then remote your github repo
+$ rm -rf .git
+$ git init
+$ git remote add origin <url>
+$ git add .
+$ git commit -m "Initial commit"
+$ git push -u origin master
 ```
