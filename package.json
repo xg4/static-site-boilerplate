@@ -26,10 +26,10 @@
     "prebuild": "npm run clean",
     "build": "parcel build src/index.html -d dist --public-url . --no-source-maps --no-content-hash",
     "clean": "rimraf dist",
-    "format": "prettier --write src/**/*",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:css": "stylelint src/**/*.{css,less,scss} --fix",
     "lint:js": "eslint src/**/*.{ts,tsx,js,jsx} --fix",
+    "pretty": "prettier --write src/**/*",
     "start": "parcel src/index.html"
   },
   "husky": {
